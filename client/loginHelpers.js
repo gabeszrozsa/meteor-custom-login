@@ -10,7 +10,8 @@ Template.login.events({
             //"Match failed"
             //"Incorrect password"
             console.log(error.reason);
-          } else {
+          }
+          else {
             Router.go('/');
           }
         });
