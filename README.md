@@ -8,3 +8,7 @@ accounts-password
 accounts-ui
 
 iron:router
+
+email
+
+session

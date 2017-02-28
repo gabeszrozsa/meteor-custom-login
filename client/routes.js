@@ -29,10 +29,26 @@ Router.route('/', function () {
   this.render('start');
 });
 
+// Router.route('/#', function () {
+//   this.render('start');
+// });
+
 Router.route('/login', function () {
   this.render('login');
 });
 
 Router.route('/register', function () {
   this.render('register');
+});
+
+Router.route('/forgot', function () {
+  this.render('ForgotPassword');
+});
+
+Router.route('/#/reset-password/:token', function () {
+  this.render('ResetPassword');
+});
+
+Router.route('/change-password', function () {
+  this.render('ChangePassword');
 });
