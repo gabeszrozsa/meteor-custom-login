@@ -3,12 +3,17 @@ Template.register.events({
         event.preventDefault();
         var email = $('[name=email]').val();
         var password = $('[name=password]').val();
+        var user = $('[name=user]').val();
 
-        Accounts.createUser({
+        var profile = {
               email: email,
-              password: password
-          },
-          function(error,success){
+              password: password,
+              name: user
+        };
+
+        Accounts.createUser(profile,
+          function(error){
+
             if (error) {
               // “Email already exists”, if the email is registered to another user.
               // “Need to set a username or email”, if the email field is empty.
